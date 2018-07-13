@@ -3,3 +3,52 @@ body {
 	font-family: 'Arial';
 }
 
+button {
+	background: none;
+}
+
+input,
+button {
+	border: none;
+	outline: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+header {
+	menu {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style-type: none;
+			display: inline;
+		}
+
+		.search {
+			display: flex;
+			align-items: center;
+			float: right;
+
+			button {
+				background: url('../img/search_button.svg');
+				background-size: 100%;
+				width: 20px;
+				height: 20px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			input,
+			button {
+				height: 20px;
+			}
+		}
+	}
+}
