@@ -1,3 +1,5 @@
+@menu-color: rgb(255, 0, 0);
+
 body {
 	margin: 0;
 	font-family: 'Arial';
@@ -23,16 +25,30 @@ header {
 	menu {
 		padding: 0;
 		margin: 0;
+		background-color: @menu-color;
 
 		li {
 			list-style-type: none;
-			display: inline;
+			display: inline-block;
+			color: lighten(@menu-color, 50%);
+
+			a {
+				line-height: 40px;
+				padding: 10px;
+				transition: .15s;
+			}
+
+			&:hover > a {
+				background-color: darken(@menu-color, 5%);
+				color: lighten(@menu-color, 100%);
+			}
 		}
 
 		.search {
 			display: flex;
 			align-items: center;
 			float: right;
+			padding: 10px;
 
 			button {
 				background: url('../img/search_button.svg');
