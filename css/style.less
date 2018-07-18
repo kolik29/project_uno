@@ -22,64 +22,80 @@ a {
 }
 
 header {
-	menu {
-		padding: 0;
-		margin: 0;
+	div {
 		background-color: @menu-color;
+		position: fixed;
+		width: 100%;
 
-		li {
-			list-style-type: none;
-			display: inline-block;
-			color: lighten(@menu-color, 50%);
+		menu {
+			padding: 0;
+			margin: 0;
+			margin-left: ~'calc(50% - 500px)';
+			width: 1000px;
 
-			a {
-				height: 40px;
-				display: block;
-				padding: 0 10px;
-				line-height: 40px;
-			}
+			li {
+				list-style-type: none;
+				display: inline-block;
+				color: lighten(@menu-color, 50%);
 
-			&:hover {
-				background-color: darken(@menu-color, 5%);
-				color: lighten(@menu-color, 100%);
-			}
-		}
-
-		.search {
-			display: flex;
-			align-items: center;
-			float: right;
-			height: 40px;
-			background-color: darken(@menu-color, 5%);
-			transition: .3s;
-
-			input,
-			button {
-				height: 40px;
-			}
-
-			button {
-				background: url('../img/search_button_1.svg');
-				background-size: 80%;
-				background-repeat: no-repeat;
-				background-position: center;
-				width: 40px;
+				a {
+					height: 40px;
+					display: block;
+					padding: 0 10px;
+					line-height: 40px;
+				}
 
 				&:hover {
-					cursor: pointer;
+					background-color: darken(@menu-color, 5%);
+					color: lighten(@menu-color, 100%);
 				}
 			}
 
-			input {
-				width: 250px;
-				font-size: 25px;
+			.search {
+				display: flex;
+				align-items: center;
+				float: right;
+				height: 40px;
 				background-color: darken(@menu-color, 5%);
 				transition: .3s;
-				color: lighten(@menu-color, 100%);
 
-				&:focus {
-					background-color: #fff;
-					color: darken(@menu-color, 35%);
+				input,
+				button {
+					height: 40px;
+				}
+
+				button {
+					background: url('../img/search_button_1.svg');
+					background-size: 80%;
+					background-repeat: no-repeat;
+					background-position: center;
+					width: 40px;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+
+				input {
+					width: 250px;
+					font-size: 20px;
+					background-color: darken(@menu-color, 5%);
+					transition: .3s;
+					color: lighten(@menu-color, 90%);
+					padding: 0 10px;
+
+					&:focus {
+						background-color: #fff;
+						color: darken(@menu-color, 35%);
+					}
+
+					&::-webkit-input-placeholder {
+						color: lighten(@menu-color, 90%);
+   					}
+
+   					&::-moz-placeholder {
+						color: lighten(@menu-color, 90%);
+   					}
 				}
 			}
 		}
