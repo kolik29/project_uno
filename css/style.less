@@ -22,82 +22,36 @@ a {
 }
 
 header {
-	div {
+	border-bottom: 5px solid grey;
+
+	menu {
+	    padding: 0;
+	    margin: 0;
 		background-color: @menu-color;
-		position: fixed;
-		width: 100%;
+		display: flex;
+		flex-direction: bottom;
+		height: 50px;
+		align-items: flex-end;
 
-		menu {
-			padding: 0;
-			margin: 0;
-			margin-left: ~'calc(50% - 500px)';
-			width: 1000px;
+		li {
+			display: inline-block;
+			list-style-type: none;
+			margin-left: 5px;
 
-			li {
-				list-style-type: none;
-				display: inline-block;
-				color: lighten(@menu-color, 50%);
-
-				a {
-					height: 40px;
-					display: block;
-					padding: 0 10px;
-					line-height: 40px;
-				}
-
-				&:hover {
-					background-color: darken(@menu-color, 5%);
-					color: lighten(@menu-color, 100%);
-				}
-			}
-
-			.search {
+			a {
+				height: 40px;
+				padding: 0 40px;
+				background-color: grey;
 				display: flex;
 				align-items: center;
-				float: right;
-				height: 40px;
-				background-color: darken(@menu-color, 5%);
-				transition: .3s;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+			}
 
-				input,
-				button {
-					height: 40px;
-				}
-
-				button {
-					background: url('../img/search_button_1.svg');
-					background-size: 80%;
-					background-repeat: no-repeat;
-					background-position: center;
-					width: 40px;
-
-					&:hover {
-						cursor: pointer;
-					}
-				}
-
-				input {
-					width: 250px;
-					font-size: 20px;
-					background-color: darken(@menu-color, 5%);
-					transition: .3s;
-					color: lighten(@menu-color, 90%);
-					padding: 0 10px;
-
-					&:focus {
-						background-color: #fff;
-						color: darken(@menu-color, 35%);
-					}
-
-					&::-webkit-input-placeholder {
-						color: lighten(@menu-color, 90%);
-   					}
-
-   					&::-moz-placeholder {
-						color: lighten(@menu-color, 90%);
-   					}
-				}
+			&:first-child {
+				margin-left: 0;
 			}
 		}
 	}
 }
+

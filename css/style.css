@@ -1,1 +1,46 @@
-body{margin:0;font-family:Arial}button{background:0 0}button,input{border:none;outline:0;padding:0}a{text-decoration:none;color:unset}header div{background-color:red;position:fixed;width:100%}header div menu{padding:0;margin:0;margin-left:calc(50% - 500px);width:1000px}header div menu li{list-style-type:none;display:inline-block;color:#fff}header div menu li a{height:40px;display:block;padding:0 10px;line-height:40px}header div menu li:hover{background-color:#e60000;color:#fff}header div menu .search{display:flex;align-items:center;float:right;height:40px;background-color:#e60000;transition:.3s}header div menu .search button,header div menu .search input{height:40px}header div menu .search button{background:url(../img/search_button_1.svg);background-size:80%;background-repeat:no-repeat;background-position:center;width:40px}header div menu .search button:hover{cursor:pointer}header div menu .search input{width:250px;font-size:20px;background-color:#e60000;transition:.3s;color:#fff;padding:0 10px}header div menu .search input:focus{background-color:#fff;color:#4d0000}header div menu .search input::-webkit-input-placeholder{color:#fff}header div menu .search input::-moz-placeholder{color:#fff}
+body {
+  margin: 0;
+  font-family: 'Arial';
+}
+button {
+  background: none;
+}
+input,
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+header {
+  border-bottom: 5px solid grey;
+}
+header menu {
+  padding: 0;
+  margin: 0;
+  background-color: #ff0000;
+  display: flex;
+  flex-direction: bottom;
+  height: 50px;
+  align-items: flex-end;
+}
+header menu li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 5px;
+}
+header menu li a {
+  height: 40px;
+  padding: 0 40px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+header menu li:first-child {
+  margin-left: 0;
+}
